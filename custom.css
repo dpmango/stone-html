@@ -7,12 +7,12 @@
 	    font-family: 'Proxima'; /* имя шрифта для CSS правил */
 	    src: local("proxima"), /* проверяем наличие шрифта в ОС пользователя */
          url(/assets/newdisign/fonts/proximanova-regular.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
-  } 
+  }
 @font-face {
 	    font-family: 'proximait'; /* имя шрифта для CSS правил */
 	    src: local("proximait"), /* проверяем наличие шрифта в ОС пользователя */
          url(/assets/newdisign/fonts/proximanova-regularitalic.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
-  }   
+  }
   @font-face {
 	    font-family: 'displaepro-bold'; /* имя шрифта для CSS правил */
 	    src: local("displaepro-bold"), /* проверяем наличие шрифта в ОС пользователя */
@@ -42,8 +42,10 @@
     font-weight: normal;
     font-style: normal;
 }
-body {
+body, html {
     font-family: 'calibriregular',Arial, Verdana, Times, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
  /*   background: url("../img/body.png") no-repeat top center; */
 }
 .container {
@@ -74,8 +76,8 @@ h1 {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-family: displaepro;
-    text-transform: uppercase; 
-    
+    text-transform: uppercase;
+
 }
 h2 {
     display: block;
@@ -84,7 +86,7 @@ h2 {
     -webkit-margin-after: 0.83em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    
+
     font-family: displaepro;
     text-transform: uppercase;
     color:#c8601b;
@@ -124,7 +126,7 @@ h2 {
 }
 #menu {
     background: url("../img/aside-back-top.jpg") repeat-x;
-   
+
 }
 #menu .container {
     background: #ffffff;
@@ -188,7 +190,7 @@ h2 {
 }
 .footer .footer-nav li a {
     text-decoration: none;
-    font-family: displaepro-bold; 
+    font-family: displaepro-bold;
     font-size:13px;
     text-transform: uppercase;
 }
@@ -249,7 +251,7 @@ h2#gradient span {
     line-height: 120px;
     padding: 5px;
     margin: 5px;
-    
+
 }
 .owl-carousel > .item img {
     max-width: 100%;
@@ -284,7 +286,7 @@ h2#gradient span {
 } */
 .sidebar-item > ul {
     padding: 10px 0;
-    
+
    /* border: 1px solid #c1c1c1; */
 }
 .sidebar-item ul li a,h5 {
@@ -481,7 +483,7 @@ h2#gradient span {
         width: 100%;
       /*  text-align: right; */
     }
-    
+
     h4 .caret{
         display:none;
     }
@@ -505,14 +507,14 @@ h2#gradient span {
         font-weight:bold;
         cursor: pointer;
     }
-    
+
     .text-calc{
         padding-left:10px;
     }
    /* .left-menu-icon img{
       position:absolute;
       right:0;
-        
+
     } */
     .sidebar-item i{
     font-size:8px;
@@ -568,7 +570,7 @@ h2#gradient span {
     }
     .caret {
         display: none;
-    } 
+    }
     .footer-icons {
         text-align: center;
     }
@@ -635,7 +637,7 @@ h2#gradient span {
     .navbar-default .navbar-nav > .active > a:focus {
         color: #fff;
     }
-    
+
     #header-top div {
         margin-bottom: 20px;
     }
@@ -655,7 +657,7 @@ h2#gradient span {
    /* .left-menu-icon img{
       position:absolute;
       right:0;
-        
+
     } */
     .sidebar-item i{
     font-size:8px;
@@ -686,7 +688,7 @@ h2#gradient span {
     }
     .navbar-default .navbar-nav > li.button-opt > a{
     color:white;
-    
+
 }
 }
 /* new */
@@ -701,13 +703,13 @@ h2#gradient span {
     display:inline-block;
     color:white;
     font-size:22px;
-    
+
 }
 .phone-header{
     font-family: displaepro;
     position:absolute;
     top:20px;
-    
+
 }
 .top-number{
     display:block;
@@ -733,18 +735,18 @@ h2#gradient span {
     color:white;
     text-decoration:none;
 }
- 
+
 @media (min-width: 1200px) {
 .back-menu {
     background: url(/assets/newdisign//img/menu-up-fon.jpg);
     height: 111px;
-    margin-left: -60px; 
+    margin-left: -60px;
 }
 .hoverlogo{
     display:none;
-}    
+}
 .main-content p{
-    
+
     font-family: Proxima, Times;
     font-size:18px;
     color:grey;
@@ -759,21 +761,21 @@ h2#gradient span {
 .back-menu {
     background: url(/assets/newdisign/img/menu-up-fon.jpg);
     height: 111px;
-    margin-left: 0px; 
-    
+    margin-left: 0px;
+
 }
 .navigation li{
     z-index:4;
 }
 .hoverlogo{
     display:none;
-} 
+}
  .phone-header{
         left:54px;
     }
 
 .main-content p{
-    
+
     font-family: Proxima, Times;
     font-size:18px;
     color:grey;
@@ -785,19 +787,19 @@ h2#gradient span {
 }
 }
 @media screen and (max-width: 991px) {
-    
+
     .phone-header{
         left:87px;
         z-index:2;
     }
     .hoverlogo{
     display:none;
-}  
+}
     .navbar-toggle {
     right: -39px;
 }
 .main-content p{
-    
+
     font-family: Proxima, Times;
     font-size:18px;
     color:grey;
@@ -823,7 +825,7 @@ h2#gradient span {
     }
     .back-menu{
         min-height:111px;
-        
+
     }
     .box-back-menu{
         background:black;
@@ -835,10 +837,10 @@ h2#gradient span {
     .logo-wrapp img.hoverlogo{
     display:block;
     left:0;
-    
-} 
+
+}
 .main-content p{
-    
+
     font-family: Proxima, Times;
     font-size:18px;
     color:grey;
@@ -851,7 +853,7 @@ h2#gradient span {
 }
 @media screen and (max-width: 500px) {
 .main-content p{
-    
+
     font-family: Proxima, Times;
     font-size:16px;
     color:grey;
@@ -873,7 +875,7 @@ h2#gradient span {
 .left-menu { z-index: 1; }
 
 .first-aside-h2{
-    
+
     background:url(/assets/newdisign/img/back-first-h2.png) no-repeat;
     background-position: right top;
     height:68px;
@@ -930,7 +932,7 @@ h2#gradient span {
     padding-top:3px;
     position:relative;
     height:54px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     color: #c8601b;
     vertical-align:middle;
 }
@@ -1015,7 +1017,7 @@ p.proximait{
 
 /*ДЛЯ ФУТЕРА*/
 @media screen and (min-width: 1200px) {
-    
+
     .footer{
     background-image: url('/assets/newdisign/img/footer-right.jpg');
 	background-repeat: repeat-x;
@@ -1087,7 +1089,7 @@ p.proximait{
 }
 }
 @media screen and (max-width: 1199px) {
-    
+
     .navbar-default .navbar-nav > li.button-opt > a {
         border:none;
     }
@@ -1173,7 +1175,7 @@ p.proximait{
 }
 .footer-right{
     min-height:111px;
-    background-image: none;  
+    background-image: none;
 	background-repeat: no-repeat;
 	background-position:  bottom left;
 }
@@ -1198,7 +1200,7 @@ p.proximait{
 @media screen and (max-width: 900px) {
 .footer-photo {
     display: none;
-    
+
 }
 }
 @media screen and (max-width: 750px) {
@@ -1210,7 +1212,7 @@ a.cbp-lightbox{
     position:relative;
     overflow:hidden;
     width:100%;
-    
+
 }
 .smap {
  border: 1px solid black;
@@ -1222,7 +1224,7 @@ a.cbp-lightbox{
     display:block;
     position:relative;
     margin:0 auto;
-}    
+}
 /*ТАБЛИЦА*/
 
 .table_painted td:nth-of-type(even) {
@@ -1245,8 +1247,8 @@ a.cbp-lightbox{
   background-color: #ff0000 !important;
   color: #fff;
   border-radius: 0px;
-  
-  
+
+
 }
 
 .table_painted_single tr:hover {
@@ -1364,7 +1366,7 @@ a.cbp-lightbox{
   /*color: #000 !important;*/
 }
 .table_painted_single {
-  
+
   }
 .table_painted_single thead b, .table_painted_single thead strong {
   font-weight: normal;
@@ -1429,8 +1431,8 @@ a.cbp-lightbox{
 /*Стили скрытого текста*/
 /* скрываем чекбоксы и блоки с содержанием */
 .hide, .hide + label ~ div.news {
-    display: none; 
-    
+    display: none;
+
 }
 /* вид текста label */
 .hide + label,
@@ -1448,16 +1450,16 @@ a.cbp-lightbox{
 }
 /* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div.news {
-    display: block; 
-    
-    
+    display: block;
+
+
     margin-top: 10px;
     margin-left: 20px;
     padding: 10px;
 /* анимации при появлении */
-    -webkit-animation:fade ease-in 0.5s; 
+    -webkit-animation:fade ease-in 0.5s;
     -moz-animation:fade ease-in 0.5s;
-    animation:fade ease-in 0.5s; 
+    animation:fade ease-in 0.5s;
 }
 /* анимация при появлении скрытых блоков */
 @-moz-keyframes fade {
@@ -1470,7 +1472,7 @@ to { opacity: 1 }
 }
 @keyframes fade {
     from { opacity: 0; }
-to { opacity: 1 }   
+to { opacity: 1 }
 }
 .h2-news{
 	font-size:18px;
@@ -1484,7 +1486,7 @@ to { opacity: 1 }
 }
 .leaf{
     position:relative;
-} 
+}
 .leaf:hover .auto-hidden{
     position:absolute;
     background:#fdf7f7;
@@ -1495,7 +1497,7 @@ to { opacity: 1 }
     padding-right:10px;
     width:210px;
     box-shadow: 0 0 5px;
-} 
+}
 
 /*ВСПЛЫВАЮЩАЯ ФОРМА*/
 
@@ -1513,7 +1515,7 @@ to { opacity: 1 }
     margin-left: -150px;
     z-index:10;
     color:black;
-    
+
 }
 @media (max-width: 350px) {
     .form-zakaz-meat{
@@ -1524,7 +1526,7 @@ to { opacity: 1 }
 }
 .form-zakaz-kamen input{
     margin-bottom:5px;
-    
+
 }
 .close-form-kamen{
     cursor:pointer;
@@ -1570,11 +1572,11 @@ to { opacity: 1 }
 }
 /*.standart-palitra .katalog{
     border: 1px solid #bdd0d0;
-    
+
 } */
 .standart-palitra .kataloggeneral{
     border: 1px solid #bdd0d0;
-    
+
 }
  a:hover{
     color:#ff8400;
@@ -1628,7 +1630,7 @@ box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.75);
 }
 .content-palitra-active{
     display:inline-block;
-    
+
     text-transform: uppercase;
     font-family: displaepro-bold;
     font-size: 14px;
@@ -1640,13 +1642,13 @@ box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.75);
     margin-left: 10px;
     margin-bottom:10px;
     padding: 7px;
-    
+
 }
 .block-statii img{float:left;margin:0px 10px 10px 0px;}
 .block-statii a{font-size:16px;}
 .block-statii a:hover{color:#ff8400;}
 .box-title-palitra{
-   margin-bottom:10px; 
+   margin-bottom:10px;
    margin-left: 15px;
 }
 .box-title-palitra a{
@@ -1661,11 +1663,11 @@ box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.75);
     position:absolute;
     bottom:2px;
     left:13px;
-    
+
 }
 .footer a.siteupper{
     color: #78c9c9;
-    
+
     font-size:16px;
 }
 
@@ -1684,9 +1686,9 @@ box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.75);
  font: normal normal 42px/42px sans-serif;
  text-shadow: 0 1px 2px #000;
  opacity: .5;
- 
+
  margin-bottom: 1px;
- 
+
  width: 42px;
  height: 42px;
 }
@@ -1708,7 +1710,7 @@ border: 1px solid #bdd0d0;
 }
 .border-katalog:hover{
     border: 1px solid #ff8400;
-} 
+}
 
 /*Стили элементов контента*/
 
@@ -1794,14 +1796,14 @@ border: 1px solid #bdd0d0;
     margin-top:0;
     position:relative;
     padding-right:10px;
-    
+
 }
 .right-box-stock img{
     width:160px;
     margin-bottom:20px;
 }
 .right-box-stock a{
-   color:#fbf1f1; 
+   color:#fbf1f1;
 }
 
 .right-box-stock .icon-stock{
@@ -1809,7 +1811,7 @@ border: 1px solid #bdd0d0;
     display:block;
     position:absolute;
     height:80px;
-    background: url("/assets/newdisign/img/akciya-new.png") no-repeat top center; 
+    background: url("/assets/newdisign/img/akciya-new.png") no-repeat top center;
     right:-18px;
     top:-18px;
     float:right;
@@ -1822,19 +1824,19 @@ border: 1px solid #bdd0d0;
   .adap img{
     width:135px;
     height:93px;
-}  
+}
 }
 @media screen and (max-width: 767px) {
   .adap img{
     width:154px;
     height:109px;
-}  
+}
 }
 @media screen and (max-width: 400px) {
   .adap img{
     width:111px;
     height:76px;
-}  
+}
 }
 @media screen and (min-width: 768px) {
   .katalog img{
@@ -1943,4 +1945,123 @@ border: 1px solid #bdd0d0;
 }
 .hiden-left-menu li ul li{
     margin-left:15px;
+}
+
+// CUSTOM TABS
+.i-tab{
+  margin: 10px 0 30px 0;
+}
+
+.i-tab h2{
+  margin-top: 10px !important;
+  display: none;
+}
+.i-tab h2.active{
+  display: block;
+}
+.i-tab__navigate{
+
+}
+.i-tab__navigate a{
+  display: inline-block;
+  background: white;
+  color: #445d5d !important;
+  font-size: 12px;
+  opacity: 0.5;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  margin-left: -5px;
+  transition: all .4s ease;
+  transform: skewX(45deg);
+}
+.i-tab__navigate a span{
+  transform: skewX(-45deg);
+  display: inline-block;
+}
+.i-tab__navigate a:hover{
+  background: #eef6f6;
+}
+
+.i-tab__navigate a.active{
+  background: #eef6f6;
+  opacity: 1;
+}
+
+.i-tab__item{
+  display: none;
+}
+.i-tab__item.active{
+  display: block;
+}
+
+.i-tab__content{
+
+}
+.i-tab__content p{
+  font-size: 14px !important;
+  color: #171717 !important;
+}
+
+.i-tab__content__price{
+  font-size: 24px;
+  color: #ff8300;
+  margin: 10px 0 15px 0;
+}
+.i-tab__content__price span{
+  color: #445d5d;
+  position: relative;
+  display: inline-block;
+}
+.i-tab__content__price span:after{
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  background: #445d5d;
+  height: 2px;
+  width: 10px;
+  content: ' ';
+  display: block;
+}
+.i-tab__content__list{
+  font-size: 14px;
+  color: #171717;
+}
+.i-tab__content__list li span{
+  display: inline-block;
+  line-height: 1.1em;
+  border-bottom: 1px dashed #171717;
+}
+
+.i-tab__button{
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: inline-block;
+  color: white !important;
+  text-decoration: none !important;
+  border: 2px solid #9f4000;
+  width: 140%;
+  background: #9f4000;
+  border-radius: 15px;
+  padding: 7px 15px;
+  text-align: center;
+  margin: 20px 5px 5px 5px;
+  vertical-align: middle;
+  transition: all .4s ease;
+  box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.75);
+}
+.i-tab__button:hover{
+  color: white;
+  text-decoration: none;
+  background: #ab5219;
+}
+.i-tab__image{
+  margin-top: 20px;
+}
+.i-tab__image img{
+  margin: 0 !important;
+  float: none !important;
 }

@@ -1,5 +1,15 @@
 $(document).ready(function() {
-   
+  // Prevent # errors
+	$('[href="#"]').click(function (e) {
+		e.preventDefault();
+	});
+  // tabs switcher
+  $('.i-tab__navigate').on('click', 'a:not(.active)', function() {
+		$(this).addClass('active').siblings().removeClass('active')
+		.closest('.i-tab').find('.i-tab__item').removeClass('active').eq($(this).index()).addClass('active');
+    $(this).closest('.i-tab').find('.i-tab__names h2').removeClass('active').eq($(this).index()).addClass('active');
+	});
+
           var error=0;
           var error2=0;
           var error3=0;
@@ -11,7 +21,7 @@ $(document).ready(function() {
               $('.form-zakaz-kamen').show();
               $('.change-title').html($(this).attr('data-package'));
           });
-          $(document).ajaxStop(function(){  
+          $(document).ajaxStop(function(){
               $('.close-form-kamen').click(function(){
               $('.form-zakaz-kamen').hide();
               $('.fixed-overlay').hide();
@@ -27,19 +37,19 @@ $(document).ready(function() {
                }
                else{
                     $('.error-name').hide();
-                    error=1;  
+                    error=1;
                }
                if($('.zakaz-phone').val()==''){
                    $('.error-phone').show();
                }
                else{
                    $('.error-phone').hide();
-                   error2=1; 
+                   error2=1;
                }
-                
-                
-               
-               
+
+
+
+
                if((error==1)&&(error2==1)){
                    var	datazakaz="name=" + $('.zakaz-name').val() + "&phone=" + $('.zakaz-phone').val() + "&mail=" + $('.zakaz-mail').val();
                    $.ajax({
@@ -50,11 +60,11 @@ $(document).ready(function() {
 							  success: function(responsezakaz){
 							      if (responsezakaz.success) {
 							          $('.form-zakaz-kamen').html('Ваш заказ отправлен. В ближайшее время с Вами свяжется наш менеджер. <span class="close-form-kamen"><i class="fa fa-times" aria-hidden="true"></i></span>');
-							         
+
 							  }
 							  }
-                   });		  
-               }  
+                   });
+               }
            });
       	$(function(){
  if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
@@ -88,10 +98,10 @@ $(document).ready(function() {
         $(this).closest('.toggle-info').find('.caret').slideToggle(0);
         $(".nav-info").slideToggle("slow");
     });
-    
+
 
     $(".toggle-catalog").click(function() {
-        
+
         $(this).closest('.toggle-catalog').find('.caret-default').slideToggle(0);
         $(this).closest('.toggle-catalog').find('.caret').slideToggle(0);
         $(".nav-catalog").slideToggle("slow");
@@ -139,14 +149,14 @@ $(document).ready(function() {
     });
 
     // Выпадающая форма "Мы перезвоним"
-    
+
    $(".callback-toggle").click(function() {
         $(".callback-wrapp").slideToggle(400);
         return false;
-    });  
+    });
 
     // Слайдер
-    
+
     $('.bxslider').bxSlider({
         pagerCustom: '#bx-pager',
         mode: 'fade',
@@ -180,8 +190,8 @@ $(document).ready(function() {
 
 });
 	$(document).ready(function() {
-   
-		
+
+
 	$('.popup-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -205,18 +215,18 @@ $(document).ready(function() {
             audio.play();
             $('.right-box-stock').show();
 	       }
-	       
+
     }, 3000);
     setTimeout( function(){
 	       if($('audio').is($('#sound-link'))){
-            $('.right-box-stock').animate({height: 'hide'}, 500); 
+            $('.right-box-stock').animate({height: 'hide'}, 500);
 	       }
-	       
+
     }, 15000);
     $(".fa-times").click(function() {
         $(".right-box-stock").hide();
-        
-    });  
+
+    });
     function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -228,7 +238,7 @@ $(document).ready(function() {
 
 	if($('.btn-more').css('display')=='none')
 	{$('.btn-all').hide();}
-	
+
     if(idpage==500)
     {
         $('.btn-all').hide();
