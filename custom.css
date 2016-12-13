@@ -1955,6 +1955,8 @@ border: 1px solid #bdd0d0;
 .i-tab h2{
   margin-top: 10px !important;
   display: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 .i-tab h2.active{
   display: block;
@@ -1972,11 +1974,16 @@ border: 1px solid #bdd0d0;
   text-transform: uppercase;
   padding: 15px 20px;
   margin-left: -5px;
+  -webkit-transition: all .4s ease;
   transition: all .4s ease;
-  transform: skewX(45deg);
+  -webkit-transform: skewX(45deg);
+      -ms-transform: skewX(45deg);
+          transform: skewX(45deg);
 }
 .i-tab__navigate a span{
-  transform: skewX(-45deg);
+  -webkit-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+          transform: skewX(-45deg);
   display: inline-block;
 }
 .i-tab__navigate a:hover{
@@ -1990,6 +1997,8 @@ border: 1px solid #bdd0d0;
 
 .i-tab__item{
   display: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 .i-tab__item.active{
   display: block;
@@ -2050,8 +2059,10 @@ border: 1px solid #bdd0d0;
   text-align: center;
   margin: 20px 5px 5px 5px;
   vertical-align: middle;
+  -webkit-transition: all .4s ease;
   transition: all .4s ease;
-  box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.75);
+          box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.75);
 }
 .i-tab__button:hover{
   color: white;
@@ -2064,4 +2075,37 @@ border: 1px solid #bdd0d0;
 .i-tab__image img{
   margin: 0 !important;
   float: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .i-tab__navigate a{
+    margin-left: 0;
+    -webkit-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  .i-tab__navigate a span{
+    -webkit-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  .i-tab__button{
+    width: auto;
+    max-width: 100%;
+  }
+  .i-tab__image img{
+    width: 100%;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .i-tab__navigate a{
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+  .i-tab h2{
+    display: none !important;
+  }
 }
